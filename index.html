@@ -26,7 +26,7 @@
                     
           <ion-item>
             <ion-label>hh:mm (5 min steps)</ion-label>
-            <ion-datetime id="in-time" display-format="HH:mm" minute-values="05,10,15,20,25,30,35,40,45,50,55"></ion-datetime>
+            <ion-datetime id="in-time"></ion-datetime>
           </ion-item>
                 
         <ion-footer>
@@ -51,7 +51,9 @@
     //let customPickerOptions = document.getElementById('customPickerOptions');
     //customPickerOptions.pickerOptions = customPickerButtons;
     let intime = document.getElementById('in-time');
-    intime.addEventListener('ionChange',(e,f,g)=>console.log(e,f,g))
+    intime.minuteValues = [05,10,15,20,25,30,35,40,45,50,55];
+    intime.displayFormat="HH:mm";
+    intime.addEventListener('ionChange',(e)=>console.log(e,intime))
 </script>
 </body>
 </html>
