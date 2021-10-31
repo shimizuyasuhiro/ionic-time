@@ -20,19 +20,30 @@
         <ion-content class="ion-padding">
           <h1>Main Content</h1>
           <ion-item>
-            <ion-label position="floating">In</ion-label>
-            <ion-datetime id="customPickerOptions" display-format="HH:mm"></ion-datetime>
+            <ion-label position="floating">Out</ion-label>
+            <ion-datetime id="tOut" display-format="HH:mm"></ion-datetime>
           </ion-item>
-                    
+
           <ion-item>
-            <ion-label position="floating">hh:mm (5 min steps)</ion-label>
+            <ion-label position="floating">In</ion-label>
+            <ion-datetime id="tIn" display-format="HH:mm"></ion-datetime>
+          </ion-item>
+          
+          <ion-item>
+            <ion-input value="00" readonly></ion-input>
+            <ion-input value="-10" readonly></ion-input>
+          </ion-item>
+
+          <h2>h2 Content</h2>
+          <ion-item>
+            <ion-label>hh:mm (5 min steps)</ion-label>
             <ion-datetime class="hh"></ion-datetime>
             <ion-datetime id="in-time"></ion-datetime>
             <ion-datetime class="mm"></ion-datetime>
           </ion-item>
 
           <ion-item>
-            <ion-label position="floating">hh:mm (split)</ion-label>
+            <ion-label>hh:mm (split)</ion-label>
             <ion-datetime class="hh"></ion-datetime>
             <ion-datetime class="mm"></ion-datetime>
           </ion-item>
