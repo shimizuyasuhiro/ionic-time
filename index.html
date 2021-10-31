@@ -46,7 +46,7 @@
         </ion-footer>
       </ion-app>
 <script>
-    let d = Date.now();
+    let d = new Date();
     let mm = d.getMinutes();
     let hhmm = `${d.getHours()}:${(mm-=mm%5)<10?'0'+mm:mm}`
 
