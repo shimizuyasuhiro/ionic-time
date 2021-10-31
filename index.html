@@ -46,7 +46,9 @@
         </ion-footer>
       </ion-app>
 <script>
-    let hhmm = (d=>`${d.getHours()}:${(m=>m-m%5)(date.getMinutes())}`)(new Date());
+    let hhmm = (d=>`${d.getHours()}:${(m=>m-m%5)(d.getMinutes())}`)(new Date());
+
+console.log(hhmm);
 
     for(let element of document.getElementsByClassName('hh')){
         element.displayFormat="HH";
