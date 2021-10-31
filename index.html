@@ -46,23 +46,21 @@
         </ion-footer>
       </ion-app>
 <script>
-    let date = new Date();
-    let hh = date.getHours();
-    let mm = (m=>m-m%5)(date.getMinutes());
+    let hhmm = (d=>`${d.getHours()}:${(m=>m-m%5)(date.getMinutes())}`)(new Date());
 
     for(let element of document.getElementsByClassName('hh')){
         element.displayFormat="HH";
-        element.value=hh;
+        element.value=hhmm;
     };
     for(let element of document.getElementsByClassName('mm')){
         element.displayFormat="mm";
-        element.value=mm;
+        element.value=hhmm;
     };
 
     let intime = document.getElementById('in-time');
     intime.minuteValues = [0,5,10,15,20,25,30,35,40,45,50,55];
     intime.displayFormat="HH:mm";
-    intime.value=`${hh}:${mm}`;
+    intime.value=hhmm;
     intime.addEventListener('ionChange',(e)=>console.log(e,intime))
 </script>
 </body>
