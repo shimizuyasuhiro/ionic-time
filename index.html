@@ -28,13 +28,13 @@
             <ion-label>hh:mm (5 min steps)</ion-label>
             <ion-datetime class="hh"></ion-datetime>
             <ion-datetime id="in-time"></ion-datetime>
-            <ion-datetime display-format="mm" value="0"></ion-datetime>
+            <ion-datetime class="mm"></ion-datetime>
           </ion-item>
 
           <ion-item>
             <ion-label>hh:mm (split)</ion-label>
             <ion-datetime class="hh"></ion-datetime>
-            <ion-datetime class="mm" value="0"></ion-datetime>
+            <ion-datetime class="mm"></ion-datetime>
           </ion-item>
 
         </ion-content>
@@ -46,7 +46,9 @@
         </ion-footer>
       </ion-app>
 <script>
-    let hhmm = (d=>`${d.getHours()}:${(m=>m-m%5)(d.getMinutes())}`)(new Date());
+    let d = Date.now();
+    let mm = d.getMinutes();
+    let hhmm = `${d.getHours()}:${(mm-=mm%5)<10?'0'+mm:mm}`
 
 console.log(hhmm);
 
