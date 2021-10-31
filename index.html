@@ -31,10 +31,12 @@
 
           <ion-item>
             <ion-label>hh:mm (split)</ion-label>
-            <ion-datetime display-format="HH" value="new Date();"></ion-datetime>
+            <ion-datetime class="hh"></ion-datetime>
             <ion-datetime display-format="mm" value="0"></ion-datetime>
           </ion-item>
-                
+        
+        </ion-content>
+
         <ion-footer>
           <ion-toolbar>
             <ion-title>Footer</ion-title>
@@ -53,12 +55,17 @@
         return true;
         }
     }]
-    }
+    }    
     //let customPickerOptions = document.getElementById('customPickerOptions');
     //customPickerOptions.pickerOptions = customPickerButtons;
+    document.getElementsByClassName('hh').array.forEach(element => {
+        element.displayFormat="HH";
+        element.value=new Date();
+    });
     let intime = document.getElementById('in-time');
     intime.minuteValues = [05,10,15,20,25,30,35,40,45,50,55];
     intime.displayFormat="HH:mm";
+    intime.value = new Date();
     intime.addEventListener('ionChange',(e)=>console.log(e,intime))
 </script>
 </body>
