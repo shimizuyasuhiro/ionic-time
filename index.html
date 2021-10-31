@@ -34,7 +34,7 @@
           <ion-item>
             <ion-label>hh:mm (split)</ion-label>
             <ion-datetime class="hh"></ion-datetime>
-            <ion-datetime display-format="mm" value="0"></ion-datetime>
+            <ion-datetime class="mm" value="0"></ion-datetime>
           </ion-item>
 
         </ion-content>
@@ -46,15 +46,23 @@
         </ion-footer>
       </ion-app>
 <script>
+    let date = new Date();
+    let hh = date.getHours();
+    let mm = (m=>m-m%5)(date.getMinutes());
+
     for(let element of document.getElementsByClassName('hh')){
         element.displayFormat="HH";
-        element.value=new Date().toLocaleTimeString();
+        element.value=hh;
+    };
+    for(let element of document.getElementsByClassName('mm')){
+        element.displayFormat="mm";
+        element.value=mm;
     };
 
     let intime = document.getElementById('in-time');
-    intime.minuteValues = [05,10,15,20,25,30,35,40,45,50,55];
+    intime.minuteValues = [0,5,10,15,20,25,30,35,40,45,50,55];
     intime.displayFormat="HH:mm";
-    intime.value = new Date().toLocaleTimeString();
+    intime.value=`${hh}:${mm}`;
     intime.addEventListener('ionChange',(e)=>console.log(e,intime))
 </script>
 </body>
