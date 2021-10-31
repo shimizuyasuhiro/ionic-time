@@ -34,15 +34,7 @@
             <ion-datetime class="hh"></ion-datetime>
             <ion-datetime display-format="mm" value="0"></ion-datetime>
           </ion-item>
-          
-          <ion-item>
-            <ion-datetime class="hh"></ion-datetime>
-            <ion-datetime display-format="mm" value="0"></ion-datetime>
-          </ion-item>
 
-            <ion-datetime class="hh"></ion-datetime>
-            <ion-datetime display-format="mm" value="0"></ion-datetime>
-        
         </ion-content>
 
         <ion-footer>
@@ -52,24 +44,11 @@
         </ion-footer>
       </ion-app>
 <script>
-    let customPickerButtons = {
-    buttons: [{
-        text: 'Save',
-        handler: () => console.log('Clicked Save!')
-    }, {
-        text: 'テスト',
-        handler: (a,b,c) => {
-        console.log(a,b,c);
-        return true;
-        }
-    }]
-    }    
-    //let customPickerOptions = document.getElementById('customPickerOptions');
-    //customPickerOptions.pickerOptions = customPickerButtons;
-    [...document.getElementsByClassName('hh')].forEach(element => {
+    for(let element in document.getElementsByClassName('hh')){
         element.displayFormat="HH";
         element.value=new Date().toLocaleTimeString();
-    });
+    };
+
     let intime = document.getElementById('in-time');
     intime.minuteValues = [05,10,15,20,25,30,35,40,45,50,55];
     intime.displayFormat="HH:mm";
