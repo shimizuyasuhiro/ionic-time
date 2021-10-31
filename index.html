@@ -48,107 +48,107 @@
             <ion-datetime class="mm"></ion-datetime>
           </ion-item>
 
-<!-- Default Input -->
-<ion-input></ion-input>
-
-<!-- Input with value -->
-<ion-input value="custom"></ion-input>
-
-<!-- Input with placeholder -->
-<ion-input placeholder="Enter Input"></ion-input>
-
-<!-- Input with clear button when there is a value -->
-<ion-input clear-input value="clear me"></ion-input>
-
-<!-- Number type input -->
-<ion-input type="number" value="333"></ion-input>
-
-<!-- Disabled input -->
-<ion-input value="Disabled" disabled></ion-input>
-
-<!-- Readonly input -->
-<ion-input value="Readonly" readonly></ion-input>
-
-<!-- Inputs with labels -->
-<ion-item>
-  <ion-label>Default Label</ion-label>
-  <ion-input></ion-input>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-  <ion-label position="floating">Floating Label</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="fixed">Fixed Label</ion-label>
-  <ion-input></ion-input>
-  <ion-input></ion-input>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-    <ion-label position="stacked">Stacked Label</ion-label>
-    <ion-input></ion-input>
-    <ion-label position="stacked">Stacked Label</ion-label>
-    <ion-input></ion-input>
-</ion-item>
-
-<!-- Default Label -->
-<ion-label>Label</ion-label>
-
-<!-- Label Colors -->
-<ion-label color="primary">Primary Label</ion-label>
-<ion-label color="secondary">Secondary Label</ion-label>
-<ion-label color="danger">Danger Label</ion-label>
-<ion-label color="light">Light Label</ion-label>
-<ion-label color="dark">Dark Label</ion-label>
-
-<!-- Item Labels -->
-<ion-item>
-  <ion-label>Default Item</ion-label>
-</ion-item>
-
-<ion-item>
-  <ion-label class="ion-text-wrap">
-    Multi-line text that should wrap when it is too long
-    to fit on one line in the item.
-  </ion-label>
-</ion-item>
-
-<!-- Input Labels -->
-<ion-item>
-  <ion-label>Default Input</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="fixed">Fixed</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="floating">Floating</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label position="stacked">Stacked</ion-label>
-  <ion-input></ion-input>
-</ion-item>
-
-<ion-item>
-  <ion-label>Toggle</ion-label>
-  <ion-toggle slot="end" checked></ion-toggle>
-</ion-item>
-
-<ion-item>
-  <ion-checkbox slot="start" checked></ion-checkbox>
-  <ion-label>Checkbox</ion-label>
-</ion-item>
+          <ion-item-group>
+            <ion-item-divider>
+              <ion-label>A</ion-label>
+            </ion-item-divider>
+          
+            <ion-item>
+              <ion-label>Angola</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Argentina</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Armenia</ion-label>
+            </ion-item>
+          </ion-item-group>
+          
+          <ion-item-group>
+            <ion-item-divider>
+              <ion-label>B</ion-label>
+            </ion-item-divider>
+          
+            <ion-item>
+              <ion-label>Bangladesh</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Belarus</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Belgium</ion-label>
+            </ion-item>
+          </ion-item-group>
+          
+          
+          <!-- They can also be used to group sliding items -->
+          <ion-item-group>
+            <ion-item-divider>
+              <ion-label>
+                Fruits
+              </ion-label>
+            </ion-item-divider>
+          
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label>
+                  <h3>Grapes</h3>
+                </ion-label>
+              </ion-item>
+              <ion-item-options>
+                <ion-item-option>
+                  Favorite
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label>
+                  <h3>Apples</h3>
+                </ion-label>
+              </ion-item>
+              <ion-item-options>
+                <ion-item-option>
+                  Favorite
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-item-group>
+          
+          <ion-item-group>
+            <ion-item-divider>
+              <ion-label>
+                Vegetables
+              </ion-label>
+            </ion-item-divider>
+          
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label>
+                  <h3>Carrots</h3>
+                </ion-label>
+              </ion-item>
+              <ion-item-options>
+                <ion-item-option>
+                  Favorite
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          
+            <ion-item-sliding>
+              <ion-item>
+                <ion-label>
+                  <h3>Celery</h3>
+                </ion-label>
+              </ion-item>
+              <ion-item-options>
+                <ion-item-option>
+                  Favorite
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-item-group>
         </ion-content>
 
         <ion-footer>
