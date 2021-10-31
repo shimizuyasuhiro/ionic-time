@@ -23,15 +23,10 @@
             <ion-label>HH:mm</ion-label>
             <ion-datetime id="customPickerOptions" placeholder="Custom Options" display-format="HH:mm"></ion-datetime>
           </ion-item>
-          
+                    
           <ion-item>
-            <ion-label>h:mm a</ion-label>
-            <ion-datetime display-format="h:mm a"></ion-datetime>
-          </ion-item>
-          
-          <ion-item>
-            <ion-label>hh:mm A (15 min steps)</ion-label>
-            <ion-datetime display-format="h:mm A" minute-values="0,15,30,45"></ion-datetime>
+            <ion-label>hh:mm (5 min steps)</ion-label>
+            <ion-datetime id="in-time" display-format="HH:mm" minute-values="05,10,15,20,25,30,35,40,45,50,55"></ion-datetime>
           </ion-item>
                 
         <ion-footer>
@@ -53,8 +48,10 @@
         }
     }]
     }
-    let customPickerOptions = document.getElementById('customPickerOptions');
-    customPickerOptions.pickerOptions = customPickerButtons;
+    //let customPickerOptions = document.getElementById('customPickerOptions');
+    //customPickerOptions.pickerOptions = customPickerButtons;
+    let intime = document.getElementById('in-time');
+    intime.addEventListener('ionChange',(e,f,g)=>console.log(e,f,g))
 </script>
 </body>
 </html>
