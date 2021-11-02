@@ -28,7 +28,7 @@
             <ion-row>
               <ion-col>
                 <ion-item>
-                  <ion-badge color="dark">Out</ion-badge>
+                  <ion-label><ion-badge color="dark">Out</ion-badge></ion-label>
                   <ion-datetime display-format="HH:mm"></ion-datetime>
                 </ion-item>      
               </ion-col>
@@ -42,12 +42,11 @@
             <ion-row>
               <ion-col>
                 <ion-item>
-                  <ion-badge color="dark">In</ion-badge>
+                  <ion-label><ion-badge color="dark">In</ion-badge></ion-label>
                   <ion-datetime display-format="HH:mm"></ion-datetime>
                 </ion-item>      
                 <ion-item>
-                  <ion-label><ion-badge color="dark">Out</ion-badge>-<ion-badge color="dark">In</ion-badge></ion-label>
-                  <ion-datetime display-format="HH:mm"></ion-datetime>
+                  <ion-datetime readonly display-format="HH:mm"></ion-datetime>
                 </ion-item>      
               </ion-col>
               <ion-col>
