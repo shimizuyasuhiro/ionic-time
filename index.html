@@ -1,192 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="ja">
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>気絶式</title>
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
-</head>
-<body>
+  </head>
+  <body>
     <ion-app>
-          <ion-header>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>気絶式</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      
+      <ion-content padding >
+        <ion-card id="kzt">
+          <ion-grid>
+            <ion-row class="ion-align-items-center">
+              <ion-col size="2">
+                <ion-input value="A" class="ion-text-center" style="font-size: 10em;"></ion-input>
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label><ion-chip>Out</ion-chip></ion-label>
+                  <ion-datetime id="tOut"></ion-datetime>
+                </ion-item>
+                <ion-item>
+                  <ion-label><ion-chip>In</ion-chip></ion-label>
+                  <ion-datetime id="tIn"></ion-datetime>
+                </ion-item>
+                <ion-item>
+                  <ion-label><ion-chip>Out</ion-chip>-<ion-chip>In</ion-chip></ion-label>
+                  <ion-input readonly id="iRes" class="ion-text-end"></ion-input>
+                </ion-item>      
+              </ion-col>
+              <ion-col>
+                <ion-item>
+                  <ion-label><ion-chip>滞在時間</ion-chip></ion-label>
+                  <ion-datetime id="tRes" readonly></ion-datetime>
+                </ion-item>      
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+        
+      </ion-content>
+      
+      <ion-footer>
+        <ion-toolbar>
+          <ion-title>Footer</ion-title>
+        </ion-toolbar>
+      </ion-footer>
+    </ion-app>
 
-          </ion-header>
-          
-          <ion-content padding >
-
-            <ion-card>
-                <ion-grid>
-                  <ion-row>
-                    <ion-col size="2">
-                    </ion-col>
-                    <ion-col>
-                      <ion-item>
-                        <ion-label><ion-chip><ion-label>Out</ion-label></ion-chip></ion-label>
-                        <ion-datetime display-format="HH:mm"></ion-datetime>
-                      </ion-item>      
-                      <ion-item>
-                        <ion-label><ion-chip><ion-label>In</ion-label></ion-chip></ion-label>
-                        <ion-datetime display-format="HH:mm"></ion-datetime>
-                      </ion-item>      
-                      <ion-item>
-                        <ion-label><ion-chip><ion-label>In</ion-label></ion-chip>-<ion-chip><ion-label>Out</ion-label></ion-chip></ion-label>
-                        <p style="text-align: right;">2:-20</p>
-                      </ion-item>      
-                      </ion-col>
-                      <ion-col>
-                      <ion-item>
-                        <ion-label>滞在時間</ion-label>
-                        <ion-datetime display-format="HH:mm"></ion-datetime>
-                        </ion-item>      
-                      </ion-col>
-                  </ion-row>
-                </ion-grid>
-            </ion-card>
-
-            <ion-grid>
-              <ion-row>
-                <ion-col size="12" size-sm>
-                  <div>
-                    1 of 4
-                  </div>
-                </ion-col>
-                <ion-col size="12" size-sm>
-                  <div>
-                    2 of 4
-                  </div>
-                </ion-col>
-                <ion-col size="12" size-sm>
-                  <div>
-                    3 of 4
-                  </div>
-                </ion-col>
-                <ion-col size="12" size-sm>
-                  <div>
-                    4 of 4
-                  </div>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-<ion-grid>
-  <ion-row>
-    <ion-col size-md="3">
-      <div>
-        1 of 3
-      </div>
-    </ion-col>
-    <ion-col size-md="3">
-      <div>
-        2 of 3
-      </div>
-    </ion-col>
-    <ion-col size-md="3" offset-md="3">
-      <div>
-        3 of 3
-      </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-            <ion-grid>
-              <ion-row class="ion-justify-content-center">
-                <ion-col size="4">
-      <ion-card>
-            <ion-card-header>
-              <img src="p_new0566_m_new05660.svg">
-              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-              <ion-card-title>Card Title</ion-card-title>
-            </ion-card-header>
-          
-            <ion-card-content>
-              Keep close to Nature's heart... and break clear away, once in awhile,
-              and climb a mountain or spend a week in the woods. Wash your spirit clean.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-        <ion-col size="4">
-          <ion-card>
-            <img src="p_new0566_m_new05660.svg">
-            <ion-item>
-              <ion-icon name="pin" slot="start"></ion-icon>
-              <ion-label>ion-item in a card, icon left, button right</ion-label>
-              <ion-button fill="outline" slot="end">View</ion-button>
-            </ion-item>
-          
-            <ion-card-content>
-              This is content, without any paragraph or header tags,
-              within an ion-card-content element.
-            </ion-card-content>
-          </ion-card>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-
-          <h1>Main Content</h1>
-          
-          <ion-item>
-            <ion-label position="floating">Out</ion-label>
-            <ion-datetime id="tOut" display-format="HH:mm"></ion-datetime>
-          </ion-item>
-
-          <ion-item>
-            <ion-label position="floating">In</ion-label>
-            <ion-datetime id="tIn" display-format="HH:mm"></ion-datetime>
-          </ion-item>
-          
-          <ion-item>
-            <ion-input value="00" readonly></ion-input>
-            <ion-input value="-10" readonly></ion-input>
-          </ion-item>
-
-          <h2>h2 Content</h2>
-          <ion-item>
-            <ion-label>hh:mm (5 min steps)</ion-label>
-            <ion-datetime class="hh"></ion-datetime>
-            <ion-datetime id="in-time"></ion-datetime>
-            <ion-datetime class="mm"></ion-datetime>
-          </ion-item>
-
-          <ion-item>
-            <ion-label>hh:mm (split)</ion-label>
-            <ion-datetime class="hh"></ion-datetime>
-            <ion-datetime class="mm"></ion-datetime>
-          </ion-item>
-
-        </ion-content>
-
-        <ion-footer>
-          <ion-toolbar>
-            <ion-title>Footer</ion-title>
-          </ion-toolbar>
-        </ion-footer>
-      </ion-app>
 <script>
-    let d = new Date();
-    let mm = d.getMinutes();
-    let hhmm = `${d.getHours()}:${(mm-=mm%5)<10?'0'+mm:mm}`
+  for(let elem of document.getElementsByTagName('ion-datetime')){
+      elem.displayFormat="HH:mm";
+      //element.value = hhmm;
+      elem.minuteValues = [0,5,10,15,20,25,30,35,40,45,50,55];
+      elem.addEventListener('ionChange', ev=>{
+        const valOut = document.getElementById("tOut").value; 
+        const valIn = document.getElementById("tIn").value;
+        if(!valOut || !valIn) return;
 
-console.log(hhmm);
-
-    for(let element of document.getElementsByClassName('hh')){
-        element.displayFormat="HH";
-        element.value=hhmm;
-    };
-    for(let element of document.getElementsByClassName('mm')){
-        element.displayFormat="mm";
-        element.value=hhmm;
-    };
-
-    let intime = document.getElementById('in-time');
-    intime.minuteValues = [0,5,10,15,20,25,30,35,40,45,50,55];
-    intime.displayFormat="HH:mm";
-    intime.value=hhmm;
-    intime.addEventListener('ionChange',(e)=>{
-        console.log(e.detail.value.split(':'));
-        console.log(e, intime);
-    })
+        [a,b] = [valOut, valIn].map(val=>{
+          d = new Date(val);
+          d.setSeconds(0);
+          d.setMilliseconds(0);
+          return d;
+        });
+        document.getElementById("iRes").value = [a,b]
+          .map(d=>[d.getHours(), d.getMinutes()])
+          .reduce((a,b)=>[a[0]-b[0], a[1]-b[1]])
+          .join(':');
+        
+        c = new Date(a-b);
+        document.getElementById("tRes").value = [c.getUTCHours(), c.getMinutes()]
+          .map(v=>('00'+v).slice(-2))
+          .join(':');
+      });
+  };
 </script>
-</body>
+  </body>
 </html>
